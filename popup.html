@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Summarizer Settings</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      width: 300px;
+      padding: 15px;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    select, textarea, button {
+      width: 100%;
+      margin-top: 5px;
+      padding: 8px;
+      font-size: 14px;
+      box-sizing: border-box;
+    }
+
+    #status-message {
+      margin-top: 10px;
+      padding: 10px;
+      border: 1px solid;
+      display: none;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Summarizer Settings</h2>
+
+  <label for="aiPlatform">Select AI Platform:</label>
+  <select id="aiPlatform">
+    <option value="chatgpt">ChatGPT</option>
+    <option value="gemini">Gemini</option>
+    <option value="claude">Claude</option>
+  </select>
+
+  <label for="customPrompt">Custom Prompt:</label>
+  <textarea id="customPrompt" rows="5" placeholder="e.g., 'Summarize this video transcript concisely:'"></textarea>
+
+  <button id="saveSettings">Save Settings & Summarize</button>
+  <div id="status-message"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
